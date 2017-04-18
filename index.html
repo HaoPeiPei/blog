@@ -1,11 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8" />
-	<title>标题</title>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <style>
+    img{
+      width:100%;
+    }
+  </style>
 </head>
-
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/marked/0.3.6/marked.js'></script>
 <body>
-	hello World!!!
+  <div id="content">
+# Marked in browser
+## Rendered by **marked**.
+[百度](http://baidu.com) 
+<img src="http://img4.imgtn.bdimg.com/it/u=2389140428,1315216178&fm=23&gp=0.jpg" alt="" >    
+  </div>
+  <script>
+    var markdow = document.getElementById('content').innerHTML;
+    var html = marked(markdow); 
+    document.getElementById('content').innerHTML =html
+    
+  </script>
+
 </body>
 </html>
